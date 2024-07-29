@@ -130,6 +130,7 @@ export const ReportScreen = () => {
                 </Col>
                 <Col xs={24} md={8} lg={7}>
                   <SelectPicker
+                    placement="topStart"
                     className="reportInput"
                     data={nombres}
                     value={nombreValue}
