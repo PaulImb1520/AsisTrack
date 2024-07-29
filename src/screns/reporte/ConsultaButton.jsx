@@ -5,6 +5,7 @@ import {
   getReportesMensuales,
   getReportesMensualesWithDate,
 } from "../../services/reportService";
+import { notification } from "../../utils/index";
 
 const convertToHours = (minutos) => {
   let horas = minutos / 60;
@@ -26,7 +27,7 @@ export const ConsultaButon = ({
       getReportesMensualesWithDate(year, month)
         .then((res) => {
           console.log(res);
-          let data = res.data.data.matchResults;
+          let data = res.data.data;
           if (data.length > 0) {
             //Traer toda la data
             let reporteData = [];
@@ -80,11 +81,8 @@ export const ConsultaButon = ({
         });
     } else {
       // Mostrar notificación
-      toaster.push(
-        <Notification type="warning" header="Advertencia">
-          Por favor, proporcione los valores para el año y el mes.
-        </Notification>,
-        { placement: "topEnd" }
+      notification.warning(
+        "Por favor, proporcione los valores para el año y el mes."
       );
     }
   };
