@@ -3,7 +3,7 @@ import {
   reportesEndpoint,
   reportesWithDateEndpoint,
 } from "../constantes/urlEndpoints";
-import { http } from "../../utils";
+import { http } from "../utils";
 
 const getReportesMensuales = () => http.post(`${reportesEndpoint}`);
 

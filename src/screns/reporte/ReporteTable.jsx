@@ -51,7 +51,7 @@ export const ReporteTable = ({ reporteData, reporteEncabezado }) => {
             size="xs"
             layout={["total", "-", "limit", "|", "pager", "skip"]}
             total={reporteData.length}
-            limitOptions={[10, 30, 50]}
+            limitOptions={[10]}
             limit={limit}
             activePage={page}
             onChangePage={setPage}
