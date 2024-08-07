@@ -42,7 +42,7 @@ export const ModalDetalle = ({ open, setOpen, employeeNo, reporte }) => {
             {modalLabels ? (
               <Grid style={{ width: "100%" }}>
                 <h4 style={{ paddingBottom: "16px" }}>Identidad</h4>
-                <Row>
+                <Row className="row">
                   <Col lg={3} className="col-title">
                     Nombre:
                   </Col>
